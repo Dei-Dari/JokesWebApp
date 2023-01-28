@@ -1,0 +1,96 @@
+﻿https://www.youtube.com/embed/BfEjDD8mWYg
+
+--------------
+ASP
+Active Server Pages
+динамические страницы, обычно подключенные к БД
+
+no authentification
+нет учетных записей, нет бд
+
+индивидуальные учетные записи
+=> уже есть ссылки регистрации и логин
+--------------
+
+модель - шутка (вопрос, ответ ,id)
+
+Models -> add class Joke
+поля,
+должен быть конструктор для использования другими частями кода
+
+--------------
+
+динамические страницы
+
+ApplicationDbContext уже добавлен из коробки
+
+Controllers -> add controller Контроллер MVC с представлениями, использующий EntityFramework -> JokesController.cs
+класс модели - Joke
+контекст данных - ApplicationDbContext
+и автоматически добавятся представления Jokes
+
+
+--------------
+ORM  - Object Relation Mapper
+средство сопостаяления объектных отношений 
+БД-class
+ORM создает таблицу в БД в соответствии с классом
+Object Relational Mapper
+Объектно-реляционное сопоставление
+Data Access Object (DAO) - традиционный способ 
+создание таблиц вручную, традиционное управление БД, собственный SQL,
+администраторы БД запросами получают больше информации, не настолько автоматизировано 
+Microsoft ORM включает SQL запросы для простых приложений
+--------------
+
+необходимо добавить работу с бд (appsettings.json имя сервера)
+миграции
+data 
+
+Консоль диспетчера пакетов
+добавление таблицы Jokes и таблицы пользователей
+add-migration "initialsetup"
+update-database
+
+страницы методы созданы автоматически
+=> работающее приложение -> добавить функциональность
+features - особенности:
+- владелец шутки (войти в сиситему, зарегистрироваться и связать)
+- скрыть ответы
+- ограничить доступ, создание авторизованным
+
+--------------
+Shared-_Layout.cshtml
+ссылка на новое приложение
+
+--------------
+Поиск
+JokesController.cs
+метод ShowSearchForm, по нему добавить View
+Razor Page -> шаблон Create (для поиска нужны поля) -> model class Joke -> частичное представление - часть основного шаблона
+
+результат поиска
+метод post ShowSearchResults
+
+--------------
+Ответ на шутку пользователю в деталях
+Views-Jokes-Index.cshtml
+
+--------------
+authorization
+создание, редактирование,удаление шутки после авторизации
+JokesController.cs-Create
+декоратор или индикатор в [] Authorize, библиотека авторизации, post защита от подделки формы
+
+--------------
+CSS
+
+изменение формы регистрации
+https://learn.microsoft.com/ru-ru/aspnet/core/security/authentication/scaffold-identity?view=aspnetcore-7.0&tabs=visual-studio#full
+NuGet Microsoft.VisualStudio.Web.CodeGeneration.Design
+проект - добавить  создать шаблонный элемент - Identity удостоверение - нужные шаблоны и класс контекста данных
+
+--------------
+Git
+https://www.youtube.com/watch?v=BWqpTpo1kfw&ab_channel=Programmingw%2FProfessorSluiter
+добавить в систему управления версиями

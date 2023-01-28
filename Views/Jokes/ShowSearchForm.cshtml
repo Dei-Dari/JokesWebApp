@@ -1,0 +1,22 @@
+﻿@*форма ввода данных без модели*@
+<h4>Search for a Joke</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        @*форма должна переходить к другому элементу -> asp-action*@
+        <form asp-action="ShowSearchResults">            
+            <div class="form-group">
+                <label for="SearchPhrase" class="control-label"></label>
+                 @*у поля есть просто имя, не связанное с моделью, соответствующая метка*@
+                <input name="SearchPhrase" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
