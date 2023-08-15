@@ -94,3 +94,9 @@ NuGet Microsoft.VisualStudio.Web.CodeGeneration.Design
 Git
 https://www.youtube.com/watch?v=BWqpTpo1kfw&ab_channel=Programmingw%2FProfessorSluiter
 добавить в систему управления версиями
+
+--------------
+Web
+https://www.smarterasp.net/support/kb/a2135/how-to-publish-asp_net-core-web-application-via-visual-studio-2019.aspx
+https://www.smarterasp.net/support/kb/a2097/where-can-i-find-my-web-deploy-login-info.aspx
+https://www.smarterasp.net/support/kb/a42/how-to-connect-to-sql-server-with-sql-server-management-studio.aspx
